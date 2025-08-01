@@ -5,11 +5,12 @@ return {
     config = function()
       require("conform").setup({
         formatters_by_ft = {
-          lua = { "stylua" },
-          javascript = { "prettierd" },
-          typescript = { "prettierd" },
-          sql = { "sql_formatter" },
           go = { "goimports", "gofumpt" },
+          javascript = { "prettierd" },
+          lua = { "stylua" },
+          sql = { "sql_formatter" },
+          typescript = { "prettierd" },
+          typescriptreact = { "prettierd" },
         },
       })
 
