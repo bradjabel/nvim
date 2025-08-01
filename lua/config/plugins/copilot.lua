@@ -12,6 +12,7 @@ return {
 
       vim.cmd("Copilot disable")
       vim.api.nvim_set_keymap("n", "<space>cc", ":CopilotChat<cr>", {})
+      vim.api.nvim_set_keymap("v", "<space>cc", ":CopilotChat<cr>", {})
     end,
     -- -- See Commands section for default commands if you want to lazy load on them
   },
