@@ -11,6 +11,7 @@ return {
           sql = { "sql_formatter" },
           typescript = { "prettierd" },
           typescriptreact = { "prettierd" },
+          ["*"] = { "injected" },
         },
       })
 
