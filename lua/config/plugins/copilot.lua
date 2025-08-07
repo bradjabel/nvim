@@ -11,6 +11,15 @@ return {
       require("CopilotChat").setup({})
 
       vim.cmd("Copilot disable")
+
+      vim.api.nvim_create_autocmd("BufWinEnter", {
+        group = vim.api.nvim_create_augroup("CopilotChatOpen", { clear = true }),
+        pattern = "copilot-chat",
+        callback = function()
+          vim.cmd("wincmd =")
+        end,
+      })
+
       vim.api.nvim_set_keymap("n", "<space>cc", ":CopilotChat<cr>", {})
       vim.api.nvim_set_keymap("v", "<space>cc", ":CopilotChat<cr>", {})
     end,
